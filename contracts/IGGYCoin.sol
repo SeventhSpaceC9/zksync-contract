@@ -19,7 +19,7 @@ contract IGGYCoin is ERC20, ERC20Burnable, Ownable {
     EnumerableSet.AddressSet private _uniswapV2Pairs;
 
     constructor() ERC20("IGGYCoin", "IGGY") {
-        _mint(msg.sender, 21000000 * 10 ** decimals());
+        _mint(msg.sender, 210000000 * 10 ** decimals());
     }
 
     function blacklist(address _address, bool _isBlacklisting) external onlyOwner {
