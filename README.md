@@ -1,4 +1,4 @@
-# zksync合约部署和验证
+# zksync合约 编写/编译/部署/验证
 将要部署的sol合约放入`contracts`目录下，修改`deploy.ts`中的部署信息：
 ```js
 //需要部署的合约
