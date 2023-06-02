@@ -11,7 +11,7 @@ const args=["0xE8984D4A0d0a1863D29f8434d4492a9612013D6f",60 * 10, 60 *5]
 
 编译:`yarn hardhat compile`
 
-部署：`yarn hardhat deploy-zksync`
+部署：`yarn hardhat deploy-zksync --network zkSyncTestnet`
 
 验证：`yarn hardhat verify --network zkSyncTestnet 0x31405e08bDeF836cc3a0F1F68556FEEb2a61f78c 参数`
 

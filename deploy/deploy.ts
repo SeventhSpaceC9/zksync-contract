@@ -12,18 +12,18 @@ export default async function (hre: HardhatRuntimeEnvironment) {
     const proxyAgent = new ProxyAgent("http://127.0.0.1:7890")
     setGlobalDispatcher(proxyAgent)
 
-    console.log(`Running deploy script for the Greeter contract`);
+    console.log(`Running deploy script`);
 
     // Initialize the wallet.
     const wallet = new Wallet(privateKey);
 
     // Create deployer object and load the artifact of the contract you want to deploy.
     const deployer = new Deployer(hre, wallet);
-    // const artifact = await deployer.loadArtifact("Greeter");
-    // const artifact = await deployer.loadArtifact("IGGYCoin");
-    const artifact = await deployer.loadArtifact("VestingSEVS");
+        // const artifact = await deployer.loadArtifact("IGGYCoin");
+        const artifact = await deployer.loadArtifact("VestingSEVS");
     //construct arguments
-    const args=["0xE8984D4A0d0a1863D29f8434d4492a9612013D6f",60 * 10, 60 *5]
+    // const args=[]
+    const args=["0xA8F8C74Cb11b0725F8f5AA1752bc1eDeD7Cfa99A",60 * 10, 60 *5]
 
     const deploymentFee = await deployer.estimateDeployFee(artifact,args);
 
